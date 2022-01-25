@@ -1,8 +1,7 @@
-body {
-  margin: 0;
-  font-family:
+:root {
+  --default-font-family:
     -apple-system,
-    BlinkMacSystemFont,
+    "BlinkMacSystemFont",
     'Segoe UI',
     'Roboto',
     'Oxygen',
@@ -12,8 +11,14 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--default-font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
 }
 
 code {
