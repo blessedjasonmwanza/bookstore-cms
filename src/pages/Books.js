@@ -5,6 +5,8 @@ export default function Books() {
   return (
     <>
       <BookCard />
+      <BookCard />
+      <BookCard />
       <form className="add-book-form">
         <h2>ADD NEW BOOK</h2>
         <input placeholder="Book title" className="input-title" required />
