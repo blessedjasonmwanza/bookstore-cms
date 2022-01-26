@@ -20,12 +20,12 @@ export default function BookCard() {
       <div className="progress-section">
         <span className="progress-bar" />
         <span className="progress-status">
-          <span className="progress-metric">64%</span>
+          <span className="progress-metric">65%</span>
           <span className="status">Completed</span>
         </span>
       </div>
       <div className="chapter-section">
-        <span>CURRENT CHAPTER</span>
+        <span className="current-chapter">CURRENT CHAPTER</span>
         <span className="chapter">Chapter</span>
         <button type="button" className="update-progress">UPDATE PROGRESS</button>
       </div>

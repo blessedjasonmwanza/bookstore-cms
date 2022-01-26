@@ -1,15 +1,19 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
     <div className="header shadow">
       <span className="links">
         <b className="brand-name">Bookstore CMS</b>
-        <Link to="/">Books</Link>
-        <Link to="/categories">Categories</Link>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : null)}>Books</NavLink>
+        <NavLink to="/categories" className={({ isActive }) => (isActive ? 'active' : null)}>Categories</NavLink>
       </span>
-      <Link to="/profile" className="profile-icon" />
+      <NavLink to="/profile" className="profile-icon">
+        <FontAwesomeIcon icon={faUser} />
+      </NavLink>
     </div>
   );
 }
