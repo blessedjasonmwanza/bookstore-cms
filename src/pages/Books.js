@@ -1,20 +1,18 @@
 import React from 'react';
+import AddBook from '../components/AddBook';
 import BookCard from '../components/BookCard';
 
 export default function Books() {
+  // List (Dummy)to demonstrate books interactions that are to come from the API
+  const books = [
+    <BookCard key="1" />,
+    <BookCard key="2" />,
+    <BookCard key="3" />,
+  ];
   return (
     <>
-      <BookCard />
-      <BookCard />
-      <BookCard />
-      <form className="add-book-form">
-        <h2>ADD NEW BOOK</h2>
-        <input placeholder="Book title" className="input-title" required />
-        <select name="category" className="input-category" required>
-          <option defaultValue>Category</option>
-        </select>
-        <button type="submit" className="add-book">ADD BOOK</button>
-      </form>
+      { books }
+      <AddBook />
     </>
   );
 }
