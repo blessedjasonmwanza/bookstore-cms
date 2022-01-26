@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
+
+const dispatch = useDispatch();
 
 export default function BookCard() {
+  const remove = (e) => {
+    e.preventDefault();
+    const id = e.target.getAttribute('bookId');
+    dispatch(removeBook(id));
+  };
   return (
     <section className="book-card">
       <div className="title-section">
@@ -12,7 +21,7 @@ export default function BookCard() {
         <span className="actions">
           <Link to="/comments">Comments</Link>
           |
-          <Link to="/remove">Remove</Link>
+          <Link to="/remove" bookId="123" onClick={(e) => remove(e)}>Remove</Link>
           |
           <Link to="/edit">Edit</Link>
         </span>
