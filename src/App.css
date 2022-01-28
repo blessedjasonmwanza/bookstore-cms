@@ -1,38 +1,251 @@
-.App {
+:root {
+  --white-two: #e8e8e8;
+  --black-two: #080808;
+  --pale-grey: #707070;
+}
+
+.title-section .actions a {
+  text-decoration: none;
+  height: 1.188rem;
+  margin: 0 10px;
+  font-family: RobotoSlab, var(--default-font-family);
+  padding-right: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  margin: 0 0 2.375rem;
+  padding: 0 60px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--white-two);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .brand-name {
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.header .links a {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--pale-grey);
+  text-decoration: none;
+}
+
+.header .links a:hover {
+  color: var(--black-two);
+}
+
+.header .links a.active {
+  color: var(--black-two);
+  font-weight: 600;
+}
+
+.profile-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--white-two);
+  color: #0290ff;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon svg {
+  color: #0290ff;
+}
+
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  background: #fff;
+  border: 1px solid var(--white-two);
+  padding: 1rem 3.188rem 1rem 1.688rem;
+  border-radius: 4px;
+  margin: 2.313rem 6.25rem 0;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.update-progress {
+  width: 11.5rem;
+  height: 2.063rem;
+  border: none;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  cursor: pointer;
+  color: #fff;
+  font-family: RobotoSlab, var(--default-font-family);
+  font-size: 0.813rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chapter-section {
   display: flex;
+  height: inherit;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.category,
+.current-chapter {
+  text-transform: lowercase;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-size: 0.99rem;
+  letter-spacing: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-title {
+  margin: 0;
+}
+
+.progress-section {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.progress-bar {
+  display: block;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #0290ff;
+  border-top-color: #e8e8e8;
+  border-radius: 50%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-right: 30px;
+}
+
+.progress-status {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, var(--default-font-family);
+  gap: 10px;
+}
+
+.progress-metric {
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 0 0;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.progress-status .status {
+  height: 1.125rem;
+  margin: 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.add-book-form {
+  padding: 1rem 3.188rem 1rem 1.688rem;
+  border-radius: 4px;
+  margin: 2.313rem 6.25rem 0;
+  border-top: 2px solid var(--white-two);
+}
+
+.add-book-form h2 {
+  margin: 1.813rem 0;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.add-book-form input,
+.add-book-form select {
+  border-radius: 4px;
+  border: 1px solid var(--white-two);
+  background-color: #fff;
+  padding: 0.813rem 0.813rem 0.813rem 1.063rem;
+  outline: none;
+}
+
+.add-book-form input {
+  width: 55%;
+}
+
+input:focus {
+  outline: 2px solid rgba(2, 145, 255, 0.4);
+}
+
+select:focus {
+  outline: 2px solid rgba(2, 145, 255, 0.4);
+}
+
+.add-book-form select {
+  width: 25%;
+  margin: 0 2%;
+}
+
+.add-book-form button {
+  width: 12%;
+  border: none;
+  margin: 1.188rem 0 0 0.525rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab, var(--default-font-family);
+  font-size: 0.813rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-book-form button:focus {
+  outline: 2px solid rgba(2, 145, 255, 0.4);
 }
