@@ -32,6 +32,7 @@ export default function Books() {
       {
       bookList
       }
+      <div className="divider" />
       <AddBook />
     </>
   );
