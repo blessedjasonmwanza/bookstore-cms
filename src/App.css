@@ -133,7 +133,6 @@
   align-items: center;
   gap: 15px;
   text-align: center;
-  border-left: 2px solid var(--white-two);
 }
 
 .category,
@@ -152,6 +151,8 @@
 .progress-section {
   display: flex;
   flex-flow: row wrap;
+  border-right: 2px solid var(--white-two);
+  padding-right: 5rem;
 }
 
 .progress-bar {
