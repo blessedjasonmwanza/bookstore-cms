@@ -8,13 +8,14 @@ import { fetchBook } from '../redux/books/books';
 export default function Books() {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.booksReducer);
+  const keys = [];
   useEffect(() => {
     dispatch(fetchBook());
   }, []);
-  return (
-    <>
-      {
-      books.map((book) => (
+  const bookList = books.map((book) => {
+    if (!keys.includes(book.id)) {
+      keys.push(book.id);
+      return (
         <BookCard
           key={book.id}
           id={book.id}
@@ -22,7 +23,14 @@ export default function Books() {
           author={book.author}
           category={book.category}
         />
-      ))
+      );
+    }
+    return null;
+  });
+  return (
+    <>
+      {
+      bookList
       }
       <AddBook />
     </>
