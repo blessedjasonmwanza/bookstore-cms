@@ -133,6 +133,7 @@
   align-items: center;
   gap: 15px;
   text-align: center;
+  border-left: 2px solid var(--white-two);
 }
 
 .category,
