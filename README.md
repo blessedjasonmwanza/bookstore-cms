@@ -33,8 +33,7 @@ preview coming soon.
 
 ## Setup prerequisites
 
-In order for the app to work begin by installing node modules by running:
-
+In order for the app to work, you need to install dependency modules by running:
 ### `npm install`
 
 ## Available Scripts (Running the App)
