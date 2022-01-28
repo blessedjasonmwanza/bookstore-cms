@@ -14,6 +14,7 @@ export default function AddBook() {
       category: form.book_category.value,
       author: '',
     };
+    e.target.reset();
     dispatch(addBook(newBook));
   };
   return (
