@@ -21,7 +21,9 @@ export default function AddBook() {
       <h2>ADD NEW BOOK</h2>
       <input name="book_title" placeholder="Book title" className="input-title" required />
       <select name="book_category" className="input-category" required>
-        <option defaultValue>Category</option>
+        <option defaultValue value="">Category</option>
+        <option value="category A">Sample category A</option>
+        <option value="category B">Sample category B</option>
       </select>
       <button type="submit" className="add-book">ADD BOOK</button>
     </form>
