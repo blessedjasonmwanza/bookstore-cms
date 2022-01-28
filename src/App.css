@@ -50,23 +50,23 @@
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 14px;
+  font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: var(--pale-grey);
+  color: var(--black-two);
   text-decoration: none;
+  opacity: 0.5;
 }
 
 .header .links a:hover {
-  color: var(--black-two);
+  opacity: 1;
 }
 
 .header .links a.active {
-  color: var(--black-two);
-  font-weight: 600;
+  opacity: 1;
 }
 
 .profile-icon {
@@ -93,7 +93,14 @@
   border: 1px solid var(--white-two);
   padding: 1rem 3.188rem 1rem 1.688rem;
   border-radius: 4px;
-  margin: 2.313rem 6.25rem 0;
+  margin: 2.313rem 4.15rem 0;
+  width: calc(75rem - 4rem);
+}
+
+.divider {
+  border-top: 2px solid var(--white-two);
+  margin: 3.313rem 4.15rem 0;
+  width: 76rem;
 }
 
 .title-section {
@@ -188,8 +195,16 @@
 .add-book-form {
   padding: 1rem 3.188rem 1rem 1.688rem;
   border-radius: 4px;
-  margin: 2.313rem 6.25rem 0;
-  border-top: 2px solid var(--white-two);
+  margin: 0  2.15rem 0;
+  width: 76rem;
+}
+
+.add-book-form .add-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-bottom: 5rem;
 }
 
 .add-book-form h2 {
@@ -211,10 +226,22 @@
   background-color: #fff;
   padding: 0.813rem 0.813rem 0.813rem 1.063rem;
   outline: none;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.add-book-form input::placeholder {
+  color: #c4c4c4;
 }
 
 .add-book-form input {
-  width: 55%;
+  width: 38.1rem;
 }
 
 input:focus {
@@ -226,14 +253,14 @@ select:focus {
 }
 
 .add-book-form select {
-  width: 25%;
-  margin: 0 2%;
+  width: 16.813rem;
+  margin: 0.01rem 2.125rem 0;
 }
 
 .add-book-form button {
-  width: 12%;
+  width: 11.5rem;
   border: none;
-  margin: 1.188rem 0 0 0.525rem;
+  margin: 0 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   background-color: #0290ff;
