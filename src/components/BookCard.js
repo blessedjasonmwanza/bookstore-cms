@@ -1,27 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { removeBook } from '../redux/books/books';
 
-const dispatch = useDispatch();
-
-export default function BookCard() {
+export default function BookCard(props) {
+  const dispatch = useDispatch();
+  const { id, title, category } = props;
   const remove = (e) => {
     e.preventDefault();
-    const id = e.target.getAttribute('bookId');
-    dispatch(removeBook(id));
+    const bookid = e.target.getAttribute('bookid');
+    dispatch(removeBook({ id: bookid }));
   };
   return (
     <section className="book-card">
       <div className="title-section">
         <span className="category">
-          Category
+          {category}
         </span>
-        <h2 className="book-title">Book Title</h2>
+        <h2 className="book-title">{title}</h2>
         <span className="actions">
           <Link to="/comments">Comments</Link>
           |
-          <Link to="/remove" bookId="123" onClick={(e) => remove(e)}>Remove</Link>
+          <Link to="/remove" bookid={id} onClick={(e) => remove(e)}>Remove</Link>
           |
           <Link to="/edit">Edit</Link>
         </span>
@@ -41,3 +42,9 @@ export default function BookCard() {
     </section>
   );
 }
+
+BookCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
