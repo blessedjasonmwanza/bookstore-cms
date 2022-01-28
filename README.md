@@ -5,10 +5,9 @@
 > BookStore CMS web application built with; ReactJS, Redux, JavaScript, es6 modules, Babel, HTML & CSS.
 
 # Preview 
-preview coming soon.
- <!-- > 👀 Here is a sneak peak of how the project looks -->
+ > 👀 Here is a sneak peak of how the project looks
 
-<!-- ![BookStore CMS Preview](./bookstore-cms.png) -->
+![BookStore CMS Preview](./bookstore-cms.png)
 ## Built With
 
 - ReactJS
