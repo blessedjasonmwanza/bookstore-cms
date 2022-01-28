@@ -1,15 +1,21 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 // import PropTypes from 'prop-types';
 import AddBook from '../components/AddBook';
 import BookCard from '../components/BookCard';
+import { fetchBook } from '../redux/books/books';
 
 export default function Books() {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.booksReducer);
-  return (
-    <>
-      {
-      books.map((book) => (
+  const keys = [];
+  useEffect(() => {
+    dispatch(fetchBook());
+  }, []);
+  const bookList = books.map((book) => {
+    if (!keys.includes(book.id)) {
+      keys.push(book.id);
+      return (
         <BookCard
           key={book.id}
           id={book.id}
@@ -17,7 +23,14 @@ export default function Books() {
           author={book.author}
           category={book.category}
         />
-      ))
+      );
+    }
+    return null;
+  });
+  return (
+    <>
+      {
+      bookList
       }
       <AddBook />
     </>

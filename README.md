@@ -31,8 +31,12 @@ preview coming soon.
 - Internet connection
 - Code editor: _[Vscode](https://code.visualstudio.com/)_ or _[Sublime Text](https://www.sublimetext.com/)_
 
+## Setup prerequisites
 
-## Available Scripts
+In order for the app to work, you need to install dependency modules by running:
+### `npm install`
+
+## Available Scripts (Running the App)
 
 In the project directory, you can run:
 
